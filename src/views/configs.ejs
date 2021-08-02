@@ -3,14 +3,14 @@
 
 <head>
     <title>Junos Config Tool</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="css/style-home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <link href="css/style-home.css" rel="stylesheet" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 </head>
 
@@ -19,7 +19,10 @@
         <header>
             <div class="container">
                 <div class="logo col-md-5 col-sm-5 col-xs-8">
-                    <a href="/"><img src="images/banner.svg" alt="logo" /></a><span class="text">Junos Config Tool</span>
+                    <a href="/">
+                        <img src="images/banner.svg" alt="logo" />
+                    </a>
+                    <span class="text">Junos Config Tool</span>
                 </div>
                 <div class="mobile-togle col-md-12 col-sm-12 col-xs-12">
                     <nav class="navbar navbar-default" role="navigation">
@@ -35,12 +38,15 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
                                     <div class="search1">
-                                        <button type="submit"><i class="fa fa-search"></i></button> <input type="text" class="form-control" placeholder="Search">
+                                        <button type="submit">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                        <input type="text" class="form-control" placeholder="Search" />
                                     </div>
                                 </li>
                                 <ul class="navbar-nav mr-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="data-center.html">Data Center<span class="sr-only">(current)</span></a>
+                                        <a class="nav-link" href="data-center.html">Data Center <span class="sr-only">(current)</span></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link disabled" href="security.html">Security</a>
@@ -59,19 +65,22 @@
                 </div>
                 <div class="right_section col-md-5 col-xs-12">
                     <div class="search">
-                        <button type="submit"><i class="fa fa-search"></i></button> <input type="text" class="form-control" placeholder="Search">
+                        <button type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        <input type="text" class="form-control" placeholder="Search" />
                     </div>
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="data-center.html">Data Center<span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="data-center.html">Data Center <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link disabled" href="security.html">Security</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="configs">Config Repository</a>
+                                    <a class="nav-link disabled" href="configs">Config Repository</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link disabled" href="https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/issues">Support</a>
@@ -83,59 +92,26 @@
                 <div class="sign-in col-md-2">
                     <span class="dvider"></span>
                     <div class="sign">
-                        <a hrf="#"><img class="sign-in-img" src="images/avatar.svg" alt="sign-in"> Sign-in</a>
+                        <a hrf="#">
+                            <img class="sign-in-img" src="images/avatar.svg" alt="sign-in" /> Sign-in
+                        </a>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="banner">
-            <img src="images/index_splash.png" />
-            <div class="inner-content col-md-12">
-                <div class="container jumboContainer">
-                    <div class=" col-md-8 middle">
-                        <h1>Build Junos configurations<br> <span>in your web browser</span></h1>
-                    </div>
-                    <div class="content-right col-md-4">
-                        <h3>Login Header 3</h3>
-                        <span>is right here</span>
-                        <div class="text-center">
-                            <form name="signup" action="/auth/signUp" method="post">
-                                username: <input name="username" id="username" style="color: black;" /><br/> password: <input type="password" name="password" id="password" style="color: black;" /><br/>
-                                <input type="submit" value="Form Button" class="btn btn-primary btn-lg"></input>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="sec_include">
             <div class="container">
-                <div class="row">
+                <% configs.map((config, index)=>{%>
                     <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
-                        <h3>Data Center</h3>
-                        <p>Build a data center configuration</p>
-                        <img src="images/index_vxlan.svg" alt="Data Center" />
-                        <div class="read-more-btn">
-                            <a href="data-center.html" class="btn-oval">Data Center</a>
-                        </div>
+                        <h3>
+                            <%=config.title%>
+                        </h3>
+                        <p>
+                            <%=config.description.slice(0,300)%>
+                        </p>
+                        <a href="/configs/<%=config._id%>" class="btn-oval">Learn More </a>
                     </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
-                        <h3>Security</h3>
-                        <p>Build a firewall configuration</p>
-                        <img src="images/index_firewall.svg" alt="Security" />
-                        <div class="read-more-btn">
-                            <a href="security.html" class="btn-oval">Security</a>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
-                        <h3>Previous Configurations</h3>
-                        <p>Review previously generated configurations</p>
-                        <img src="images/index_configs.svg" alt="Configs" />
-                        <div class="read-more-btn">
-                            <a href="configs" class="btn-oval">Config Repository</a>
-                        </div>
-                    </div>
-                </div>
+                    <% }) %>
             </div>
         </section>
         <footer>

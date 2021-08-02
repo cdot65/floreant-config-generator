@@ -9,7 +9,7 @@ const session = require('express-session');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-const sessionsRouter = require('./src/routers/sessionsRouter');
+const configsRouter = require('./src/routers/configsRouter');
 const adminRouter = require('./src/routers/adminRouter');
 const authRouter = require('./src/routers/authRouter');
 
@@ -25,14 +25,15 @@ require('./src/config/passport.js')(app);
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-app.use('/sessions', sessionsRouter);
+// app.use('/sessions', sessionsRouter);
+app.use('/configs', configsRouter);
 app.use('/admin', adminRouter);
 app.use('/auth', authRouter);
 
 app.get('/', (req, res) => {
-  res.render('index', { title: 'junosConfig', data: ['a', 'b', 'c'] });
+    res.render('index', { title: 'junosConfig', data: ['a', 'b', 'c'] });
 });
 
 app.listen(PORT, () => {
-  debug(`listening on port ${chalk.green(PORT)}`);
+    debug(`listening on port ${chalk.green(PORT)}`);
 });
