@@ -13,7 +13,7 @@ configsRouter.use((req, res, next) => {
 });
 configsRouter.route('/').get((req, res) => {
     const url =
-        'mongodb://localhost:27017';
+        'mongodb://mongodb:27017';
     const dbName = 'junosConfig';
 
     (async function mongo() {
@@ -37,7 +37,7 @@ configsRouter.route('/').get((req, res) => {
 configsRouter.route('/:id').get((req, res) => {
     const id = req.params.id;
     const url =
-        'mongodb://localhost:27017';
+        'mongodb://mongodb:27017';
     const dbName = 'junosConfig';
 
     (async function mongo() {
