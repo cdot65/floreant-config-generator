@@ -8,7 +8,7 @@ const adminRouter = express.Router();
 
 adminRouter.route('/').get((req, res) => {
     const url =
-        'mongodb://mongodb:27017';
+        'mongodb://localhost:27017';
     const dbName = 'junosConfig';
 
     (async function mongo() {
