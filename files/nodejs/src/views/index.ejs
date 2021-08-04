@@ -78,7 +78,7 @@
                 <div class="sign-in col-md-2">
                     <span class="dvider"></span>
                     <div class="sign">
-                       <a href="/auth/signIn"><img class="sign-in-img" src="images/avatar.svg" alt="sign-in"> Sign-in</a>
+                       <a href="/auth/signIn"><img class="sign-in-img" src="images/avatar.svg" alt="sign-in">Sign-in</a>
                     </div>
                 </div>
             </div>
@@ -88,15 +88,18 @@
             <div class="inner-content col-md-12">
                 <div class="container jumboContainer">
                     <div class=" col-md-8 middle">
-                        <h1>Build Junos configurations<br> <span>in your web browser</span></h1>
+                        <h1>Build configurations<br/>
+                            <span>in your web browser</span>
+                        </h1>
                     </div>
                     <div class="content-right col-md-4">
-                        <h3>Login Header 3</h3>
-                        <span>is right here</span>
+                        <h3>Sign up</h3>
+                        <span>Enter your desired username and password</span>
                         <div class="text-center">
                             <form name="signup" action="/auth/signUp" method="post">
-                                username: <input name="username" id="username" style="color: black;" /><br/> password: <input type="password" name="password" id="password" style="color: black;" /><br/>
-                                <input type="submit" value="Form Button" class="btn btn-primary btn-lg"></input>
+                                <input type="text" name="username" id="username" placeholder="User name" style="color: black;" /><br/>
+                                <input type="password" name="password" id="password" placeholder="Password" style="color: black;" /><br/>
+                                <input type="submit" value="Create new user" class="btn btn-primary btn-lg"></input>
                             </form>
                         </div>
                     </div>

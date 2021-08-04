@@ -38,7 +38,7 @@ header {
   width: 100%;
   padding: 15px 0px 0px;
   float: left;
-  background: #212121;
+  background: #2f2e2b;
 }
 
 .text {
@@ -304,7 +304,7 @@ button.navbar-toggler {
 }
 
 footer {
-  background-color: #212121;
+  background-color: #2f2e2b;
   position: relative;
   margin-top: 20px;
   height: 350px;
@@ -792,7 +792,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Montserrat', sans-serif;
 }
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="password"]  {
     font-size: 1.6rem;
     color: #010100;
     width: 100%;
