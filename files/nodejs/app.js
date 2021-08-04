@@ -12,6 +12,7 @@ const app = express();
 const configsRouter = require('./src/routers/configsRouter');
 const adminRouter = require('./src/routers/adminRouter');
 const authRouter = require('./src/routers/authRouter');
+const addConfigRouter = require('./src/routers/addConfigRouter');
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
@@ -29,6 +30,7 @@ app.set('view engine', 'ejs');
 app.use('/configs', configsRouter);
 app.use('/admin', adminRouter);
 app.use('/auth', authRouter);
+app.use('/addConfig', addConfigRouter);
 
 app.get('/', (req, res) => {
     res.render('index', { title: 'junosConfig', data: ['a', 'b', 'c'] });
