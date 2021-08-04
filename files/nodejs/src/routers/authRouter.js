@@ -37,8 +37,8 @@ authRouter
     })
     .post(
         passport.authenticate('local', {
-            successRedirect: '/',
-            failureRedirect: '/',
+            successRedirect: '../configs',
+            failureRedirect: '/auth/signIn',
         })
     );
 authRouter.route('/profile').get((req, res) => {

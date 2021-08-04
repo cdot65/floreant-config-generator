@@ -4,13 +4,13 @@ const { MongoClient, ObjectID } = require('mongodb');
 const speakerService = require('../services/speakerService');
 
 const configsRouter = express.Router();
-configsRouter.use((req, res, next) => {
-    if (req.user) {
-        next();
-    } else {
-        res.redirect('/auth/signIn');
-    }
-});
+// configsRouter.use((req, res, next) => {
+//     if (req.user) {
+//         next();
+//     } else {
+//         res.redirect('/auth/signIn');
+//     }
+// });
 configsRouter.route('/').get((req, res) => {
     const url =
         'mongodb://localhost:27017';
