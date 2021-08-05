@@ -10,7 +10,7 @@ addConfigRouter.route('/').post((req, res) => {
         'mongodb://localhost:27017';
     const dbName = 'junosConfig';
 
-    (async function addUser() {
+    (async function addConfig() {
         let client;
         try {
             client = await MongoClient.connect(url);
