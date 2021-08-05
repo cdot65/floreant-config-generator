@@ -20,7 +20,7 @@ addConfigRouter.route('/').post((req, res) => {
             const results = await db.collection('configs').insertOne(config);
             debug(results);
             req.login(results.ops[0], () => {
-                res.redirect('configs');
+                res.redirect('/configs');
             });
         } catch (error) {
             debug(error);
