@@ -11,7 +11,7 @@ module.exports = function localStrategy() {
             },
             (username, password, done) => {
                 const url =
-                    'mongodb://mongodb:27017';
+                    'mongodb://localhost:27017';
                 const dbName = 'junosConfig';
                 (async function validateUser() {
                     let client;

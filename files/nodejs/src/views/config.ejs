@@ -1,11 +1,41 @@
 <html>
 
 <body>
-    <%=config.title%>
+    <%=config.host_name%>
         <br>
-        <p>
-            <%=config.description%><br>
-        </p>
+        <pre>
+            <code>
+                set protocols ospf area 0.0.0.0 interface lo0.0 passive
+                set protocols ospf area 0.0.0.0 interface reth0.9 interface-type p2p
+                set protocols ospf area 0.0.0.0 interface reth0.8 interface-type p2p
+                set protocols ospf area 0.0.0.0 interface reth1.105
+                set protocols ospf export POLICY_EXPORT_DEFAULT
+                set protocols ospf export POLICY_EXPORT_DIRECT
+                set protocols bgp group crpd0-containerlab0 type external
+                set protocols bgp group crpd0-containerlab0 export POLICY_EXPORT_DEFAULT
+                set protocols bgp group crpd0-containerlab0 export POLICY_EXPORT_DIRECT
+                set protocols bgp group crpd0-containerlab0 peer-as <%=config.bgp_asn%>
+                set protocols bgp group crpd0-containerlab0 neighbor 192.168.108.2
+                set protocols bgp group crpd0-containerlab1 type external
+                set protocols bgp group crpd0-containerlab1 export POLICY_EXPORT_DEFAULT
+                set protocols bgp group crpd0-containerlab1 export POLICY_EXPORT_DIRECT
+                set protocols bgp group crpd0-containerlab1 peer-as <%=config.bgp_asn%>
+                set protocols bgp group crpd0-containerlab1 neighbor 192.168.109.2
+                set protocols bgp group redtail type external
+                set protocols bgp group redtail peer-as <%=config.bgp_asn%>
+                set protocols bgp group redtail neighbor 192.168.105.121 export POLICY_EXPORT_DEFAULT
+                set protocols bgp group redtail neighbor 192.168.105.121 export POLICY_EXPORT_DIRECT
+                set protocols bgp group ubuntu20-kvm0 type external
+                set protocols bgp group ubuntu20-kvm0 export POLICY_EXPORT_DEFAULT
+                set protocols bgp group ubuntu20-kvm0 export POLICY_EXPORT_DIRECT
+                set protocols bgp group ubuntu20-kvm0 peer-as <%=config.bgp_asn%>
+                set protocols bgp group ubuntu20-kvm0 neighbor 192.168.110.2
+                set protocols lldp port-id-subtype interface-name
+                set protocols lldp port-description-type interface-alias
+                set protocols lldp interface all
+                set protocols lldp-med interface all
+            </code>
+        </pre>
 </body>
 
 </html>

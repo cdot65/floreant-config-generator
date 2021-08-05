@@ -4,16 +4,16 @@ const { MongoClient, ObjectID } = require('mongodb');
 const speakerService = require('../services/speakerService');
 
 const configsRouter = express.Router();
-configsRouter.use((req, res, next) => {
-    if (req.user) {
-        next();
-    } else {
-        res.redirect('/auth/signIn');
-    }
-});
+// configsRouter.use((req, res, next) => {
+//     if (req.user) {
+//         next();
+//     } else {
+//         res.redirect('/auth/signIn');
+//     }
+// });
 configsRouter.route('/').get((req, res) => {
     const url =
-        'mongodb://mongodb:27017';
+        'mongodb://localhost:27017';
     const dbName = 'junosConfig';
 
     (async function mongo() {
@@ -37,7 +37,7 @@ configsRouter.route('/').get((req, res) => {
 configsRouter.route('/:id').get((req, res) => {
     const id = req.params.id;
     const url =
-        'mongodb://mongodb:27017';
+        'mongodb://localhost:27017';
     const dbName = 'junosConfig';
 
     (async function mongo() {

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <title>ESI LAG Config Generator</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link href="css/style-media.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+   </head>
+   <body>
+      <div id="wrapper">
+         <header>
+            <div class="container">
+               <div class="logo col-md-5 col-sm-5 col-xs-8">
+                  <a href="/"> <img src="images/banner.svg" alt="logo" /></a>
+                  <span class="text">Junos Config Tool</span>
+               </div>
+               <div class="mobile-togle col-md-12 col-sm-12 col-xs-12">
+                  <!--1-->
+                  <nav class="navbar navbar-default" role="navigation">
+                     <div class="navbar-header">
+                        <button type="button" id="hamburger" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#top"></a>
+                     </div>
+                     <div class="collapse navbar-collapse" id="navbar-collapse-x">
+                        <ul class="nav navbar-nav navbar-right">
+                           <li>
+                              <div class="search1">
+                                 <button type="submit"><i class="fa fa-search"></i></button> <input type="text" class="form-control" placeholder="Search">
+                              </div>
+                           </li>
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="data-center.html">Data Center<span class="sr-only">(current)</span></a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link disabled" href="security.html">Security</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="configs">Config Repository</a>
+                              </li>
+                           </ul>
+                        </ul>
+                     </div>
+                     <!-- .navbar-collapse -->
+                  </nav>
+               </div>
+               <div class="right_section col-md-5 col-xs-12">
+                  <div class="search">
+                     <button type="submit"><i class="fa fa-search"></i></button> <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <i class="fas fa-bars"></i>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="data-center.html">Data Center<span class="sr-only">(current)</span></a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link disabled" href="security.html">Security</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="configs">Config Repository</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </nav>
+               </div>
+               <div class="sign-in col-md-2">
+                  <span class="dvider"></span>
+                  <div class="sign">
+                     <a href="/auth/signIn"><img class="sign-in-img" src="images/avatar.svg" alt="sign-in">Sign-in</a>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <section class="banner">
+            <img src="images/index_splash.png" />
+            <div class="inner-content col-md-12">
+               <div class="container">
+                  <h1>Data Center</h1>
+                  <span>Build ESI LAG configurations for Junos</span>
+                  <p>
+                     <span>
+                     <i class="fa fa-play"></i>
+                     </span> Watch this video to see how much this tool simplifies your life.
+                  </p>
+               </div>
+            </div>
+         </section>
+         <section class="sec_include">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xs-12 section5 text-center">
+                     <h2 class="h1 font-w400">Build Your Next ESI LAG Configuration</h2>
+                     <p class="margin-top-m margin-bottom-m">Create without complexity.</p>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                     <form name="contentForm" enctype="multipart/form-data" method="" action="" role="form" data-toggle="validator" novalidate="true">
+                     <div class="form schedule-assessment">
+                        <div class="row margin-top-l">
+                           <div class="form-group col-md-6">
+                              <label for="host_name" class="sr-only">Host Name: </label>
+                              <input name="host_name" id="host_name" placeholder="Host Name" type="text" value="" required="required" data-error="Please enter the host name.">
+                              <div class="help-block with-errors"></div>
+                           </div>
+                           <!-- close col-->  
+                           <div class="form-group col-md-6">
+                              <label for="bgp_asn" class="sr-only">BGP ASN</label>
+                              <input name="bgp_asn" id="bgp_asn" placeholder="BGP ASN" type="text" value="" required="required" data-error="Please enter your BGP ASN">
+                              <div class="help-block with-errors"></div>
+                           </div>
+                           <!-- close col-->
+                        </div>
+                        <!-- close row-->
+                        <div class="row">
+                           <div class="form-group col-md-6">
+                              <label for="lo0_0" class="sr-only">IPv4 address for lo0.0</label>
+                              <input name="lo0_0" id="lo0_0" placeholder="IPv4 address for lo0.0" type="text" value="" required="required" data-error="Please enter a valid IPv4 address.">
+                              <div class="help-block with-errors"></div>
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label for="select_options" class="sr-only">Fabric underlay protocol</label>
+                              <select name="select_options" required="required" data-error="Please select one option.">
+                                 <option value="">Fabric underlay protocol</option>
+                                 <option value="eBGP">eBGP</option>
+                                 <option value="IS-IS">IS-IS</option>
+                                 <option value="OSPF">OSPF</option>
+                                 <option value="Static">Static</option>
+                              </select>
+                              <div class="help-block with-errors"></div>
+                           </div>
+                        </div>
+                        <!-- close row-->
+                        <div class="row">
+                           <div class="form-group col-md-12">
+                              <div class="text-center">
+                                 <label>Do you want to receive the configuration via email?</label>
+                                 <div class="radio">
+                                    <label>
+                                       <input type="radio" name="email_config" value="yes" required>
+                                       Yes, absolutely!
+                                    </label>
+                                 </div>
+                                 <div class="radio">
+                                    <label>
+                                       <input type="radio" name="email_config" value="no" required>
+                                       No thanks.
+                                    </label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- close row-->
+                        <div class="form-group text-center">
+                           <input class="submit center-block btn btn-primary" value="Submit" type="submit">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <footer>
+            <div class="container">
+               <div class="main-footer col-md-12 col-xs-12">
+                  <div class="foter-logo col-md-3 col-sm-3 col-xs-2">
+                     <a href="/"><img class="desktop" src="images/footer_banner.svg"><img class="mobileImg" src="images/favicon.png"></a>
+                  </div>
+                  <div class="links col-md-5 col-md-5 col-xs-10">
+                     <ul class="quick-links col-md-4 col-xs-6">
+                        <li><a href="data-center.html">Data Center</a></li>
+                        <li><a href="security.html">Security</a></li>
+                        <li><a href="configs">Config Repository</a></li>
+                     </ul>
+                     <ul class="quick-links second-row col-md-4 col-xs-6">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="https://gitlab.com/_calvinr/web/javascript/junos-configuration/">About</a></li>
+                        <li><a href="https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/issues">Help</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!---container-->
+            <div class="video-sec col-md-4 col-sm-12 col-xs-12">
+               <h1 class="video-heading text-center"><img src="images/footer_banner.svg"></h1>
+               <span class="border"></span>
+               <p class="footer-p">
+                  This site is a proof-of-concept for building Juniper configurations. It was written and maintained by a salesman, do not trust this with your network.
+               </p>
+            </div>
+         </footer>
+      </div>
+      <!--End of Wrapper ----------->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+   </body>
+</html>

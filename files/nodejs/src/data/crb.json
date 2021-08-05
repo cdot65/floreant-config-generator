@@ -1,0 +1,9 @@
+[
+    {
+        "host_name": "qfx10k",
+        "bgp_asn": 9999,
+        "lo0_0": "192.168.255.0",
+        "select_options": "eBGP",
+        "design_template": "CRB"
+    }
+]

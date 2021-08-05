@@ -8,7 +8,7 @@ const authRouter = express.Router();
 authRouter.route('/signUp').post((req, res) => {
     const { username, password } = req.body;
     const url =
-        'mongodb://mongodb:27017';
+        'mongodb://localhost:27017';
     const dbName = 'junosConfig';
 
     (async function addUser() {
@@ -37,8 +37,8 @@ authRouter
     })
     .post(
         passport.authenticate('local', {
-            successRedirect: '/',
-            failureRedirect: '/',
+            successRedirect: '../configs',
+            failureRedirect: '/auth/signIn',
         })
     );
 authRouter.route('/profile').get((req, res) => {
