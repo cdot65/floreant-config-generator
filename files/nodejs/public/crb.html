@@ -112,18 +112,18 @@
                </div>
                <div class="row">
                   <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                     <form name="contentForm" enctype="multipart/form-data" method="" action="" role="form" data-toggle="validator" novalidate="true">
+                     <form name="contentForm" enctype="multipart/form-data" method="post" action="addConfig" role="form" data-toggle="validator" novalidate="true">
                      <div class="form schedule-assessment">
                         <div class="row margin-top-l">
                            <div class="form-group col-md-6">
-                              <label for="host_name" class="sr-only">Host Name: </label>
-                              <input name="host_name" id="host_name" placeholder="Host Name" type="text" value="" required="required" data-error="Please enter the host name.">
+                              <label for="host_name" class="sr-only">Host Name</label>
+                              <input type="text" name="host_name" id="host_name" placeholder="Host Name" required="required" data-error="Please enter the host name.">
                               <div class="help-block with-errors"></div>
                            </div>
                            <!-- close col-->  
                            <div class="form-group col-md-6">
                               <label for="bgp_asn" class="sr-only">BGP ASN</label>
-                              <input name="bgp_asn" id="bgp_asn" placeholder="BGP ASN" type="text" value="" required="required" data-error="Please enter your BGP ASN">
+                              <input type="text" name="bgp_asn" id="bgp_asn" placeholder="BGP ASN" required="required" data-error="Please enter your BGP ASN">
                               <div class="help-block with-errors"></div>
                            </div>
                            <!-- close col-->
@@ -132,7 +132,7 @@
                         <div class="row">
                            <div class="form-group col-md-6">
                               <label for="lo0_0" class="sr-only">IPv4 address for lo0.0</label>
-                              <input name="lo0_0" id="lo0_0" placeholder="IPv4 address for lo0.0" type="text" value="" required="required" data-error="Please enter a valid IPv4 address.">
+                              <input type="text" name="lo0_0" id="lo0_0" placeholder="IPv4 address for lo0.0" required="required" data-error="Please enter a valid IPv4 address.">
                               <div class="help-block with-errors"></div>
                            </div>
                            <div class="form-group col-md-6">
