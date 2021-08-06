@@ -1,7 +1,6 @@
 const express = require('express');
 const debug = require('debug')('app:configsRouter');
 const { MongoClient, ObjectID } = require('mongodb');
-const speakerService = require('../services/speakerService');
 
 const configsRouter = express.Router();
 // configsRouter.use((req, res, next) => {

@@ -34,6 +34,9 @@ require('./src/config/passport.js')(app);
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
+// import body-parsing with express
+app.use(express.json());
+
 // declare the routes for our imported routers
 app.use('/auth', authRouter);
 app.use('/configs', configsRouter);
