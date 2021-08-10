@@ -25,7 +25,7 @@ esiConfigsRouter.route('/').get((req, res) => {
 
             const esiConfigs = await db.collection('esiConfigs').find().toArray();
 
-            res.render('esiConfigs', { esiConfigs });
+            res.render('pages/esiConfigs', { esiConfigs });
         } catch (error) {
             debug(error.stack);
         }
@@ -51,7 +51,7 @@ esiConfigsRouter.route('/:id').get((req, res) => {
                 .collection('esiConfigs')
                 .findOne({ _id: new ObjectID(id) });
 
-            res.render('esiConfig', {
+            res.render('pages/esiConfig', {
                 esiConfig,
             });
         } catch (error) {
