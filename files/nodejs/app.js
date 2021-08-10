@@ -15,9 +15,11 @@ const app = express();
 
 // import our routers to call just below
 const configsRouter = require('./src/routers/configsRouter');
+const esiConfigsRouter = require('./src/routers/esiConfigsRouter');
 const adminRouter = require('./src/routers/adminRouter');
 const authRouter = require('./src/routers/authRouter');
 const addConfigRouter = require('./src/routers/addConfigRouter');
+const addEsiConfigRouter = require('./src/routers/addEsiConfigRouter');
 
 // middleware layer
 app.use(morgan('tiny'));
@@ -39,8 +41,10 @@ app.use(express.json());
 
 // declare the routes for our imported routers
 app.use('/auth', authRouter);
+app.use('/esiConfigs', esiConfigsRouter);
 app.use('/configs', configsRouter);
 app.use('/api/add-config', addConfigRouter);
+app.use('/api/add-esi-config', addEsiConfigRouter);
 app.use('/api/add-data', adminRouter);
 
 // this should never run unless index.ejs is deleted
