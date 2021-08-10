@@ -481,6 +481,15 @@ nav.navbar {
 
 /* END ANIMATED X */
 
+/* ============ hover view ============ */
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}	
+/* ============ hover view .end// ============ */
+
 /*new css*/
 
 @media (max-width: 1200px) and (min-width: 1024px) {
