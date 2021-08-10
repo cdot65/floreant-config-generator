@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head', {headerTitle: 'Data Center Configuration Generator'}); %>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+        <section class="banner">
+            <img src="images/index_splash.png" />
+            <div class="inner-content col-md-12">
+                <div class="container">
+                    <h1>Data Center</h1>
+                    <span>Build VXLAN / EVPN configurations for Junos</span>
+                    <p>
+                        <span>
+                                <i class="fa fa-play"></i>
+                            </span> Watch this video to see how much this tool simplifies your life.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sec_include">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-8 adj_text">
+                        <div class="col-xs-12 col-sm-4 col-md-4 mobile-adj_text">
+                            <img src="images/ERB.svg" alt="erb" />
+                        </div>
+                        <h3><a href="/erb">Edge Route Bridge (ERB)</a></h3>
+                        <p>The edge-routed bridging overlay performs routing at IRB interfaces located at the edge of the overlay (most often at the leaf devices). As a result, Ethernet bridging and IP routing happen as close to the end systems as possible,
+                            but still support Ethernet dependent applications at the end system level.</p>
+                        <div class="readtext">
+                            <a href="/erb">Click here</a> to begin building an ERB configuration
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
+                        <img CLASS="DESKTOP-IMG" src="images/ERB.svg" alt="erb" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec_include-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
+                        <img src="images/CRB.svg" alt="crb" />
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 adj_text">
+                        <h3><a href="/crb">Central Route Bridge (CRB)</a></h3>
+                        <p>A centrally-routed bridging overlay performs routing at a central location in the EVPN network. In this design, IRB interfaces are configured in the overlay at each spine device to route traffic between the VLANs that originate
+                            at the leaf devices and end systems. For an overview of centrally-routed bridging overlays, see the Centrally-Routed Bridging Overlay section in Data Center Fabric Blueprint Architecture Components.</p>
+                        <div class="readtext">
+                            <a href="/crb">Click here</a> to begin building an CRB configuration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec_include1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-8 adj_text">
+                        <div class="col-xs-12 col-sm-4 col-md-4 mobile-adj_text">
+                            <img src="images/Collapsed.svg" alt="collapsed_spine" />
+                        </div>
+                        <h3><a href="/collapsed-spine">Collapsed Spine</a></h3>
+                        <p>In collapsed spine fabrics, core EVPN-VXLAN overlay functions are collapsed only onto a spine layer. There is no leaf layer; the spine devices can interface directly to existing top-of-rack (ToR) switches in the access layer that
+                            might not support EVPN-VXLAN.</p>
+                        <div class="readtext">
+                            <a href="/collapsed-spine">Click here</a> to begin building an CRB configuration
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
+                        <img CLASS="DESKTOP-IMG" src="images/Collapsed.svg" alt="collapsed_spine" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sec_include-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
+                        <img src="images/CRB.svg" alt="crb" />
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8 adj_text">
+                        <h3><a href="/esi">EVPN LAG Multihoming</a></h3>
+                        <p>Ethernet link aggregation remains a vital technology in modern data center networking. Link aggregation provides the technology to bundle interfaces and to increase bandwidth in a data center by adding new links to bundled interfaces.
+                            Link aggregation can significantly increase a network’s high availability by providing a redundant path or paths that traffic can utilize in the event of a link failure and has a variety of other applications that remain highly
+                            relevant in modern data center networks.</p>
+                        <div class="readtext">
+                            <a href="/esi">Click here</a> to begin building an EVPN ESI LAG configuration
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+    </div>
+    <!--End of Wrapper ----------->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

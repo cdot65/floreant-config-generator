@@ -1,0 +1,103 @@
+<div class="container">
+    <div class="logo col-md-5 col-sm-5 col-xs-8">
+        <a href="/"> <img src="../images/banner.svg" alt="logo" /></a>
+        <span class="text">Junos Configuration Generator</span>
+    </div>
+    <div class="mobile-togle col-md-12 col-sm-12 col-xs-12">
+        <!--1-->
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="hamburger" class="navbar-toggle x collapsed" data-toggle="collapse" data-target="#navbar-collapse-x">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                <a class="navbar-brand" href="#top"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-x">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div class="search1">
+                            <button type="submit"><i class="fa fa-search"></i></button> <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </li>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/data-center">Data Center<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="/security">Security</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Configurations</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="/data-center">Data Center</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="/crb">Central Route Bridge (CRB)</a></li>
+                                        <li><a class="dropdown-item" href="#">Collapsed Spine</a></li>
+                                        <li><a class="dropdown-item" href="#">Edge Route Bridge (ERB)</a></li>
+                                        <li><a class="dropdown-item" href="/esiConfigs">EVPN LAG Multihoming</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="/security">Security</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Firewall Policies</a></li>
+                                        <li><a class="dropdown-item" href="#">Remote Access VPN</a></li>
+                                        <li><a class="dropdown-item" href="#">Site-to-Site VPN</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+            <!-- .navbar-collapse -->
+        </nav>
+    </div>
+    <div class="right_section col-md-5 col-xs-12">
+        <div class="search">
+            <button type="submit"><i class="fa fa-search"></i></button> <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                     <i class="fas fa-bars"></i>
+                     </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/data-center">Data Center<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/security">Security</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Configurations</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="/data-center">Data Center</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="/crb">Central Route Bridge (CRB)</a></li>
+                                    <li><a class="dropdown-item" href="#">Collapsed Spine</a></li>
+                                    <li><a class="dropdown-item" href="#">Edge Route Bridge (ERB)</a></li>
+                                    <li><a class="dropdown-item" href="/esiConfigs">EVPN LAG Multihoming</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="/security">Security</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Firewall Policies</a></li>
+                                    <li><a class="dropdown-item" href="#">Remote Access VPN</a></li>
+                                    <li><a class="dropdown-item" href="#">Site-to-Site VPN</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="sign-in col-md-2">
+        <span class="dvider"></span>
+        <div class="sign">
+            <a href="/auth/signIn"><img class="sign-in-img" src="../images/avatar.svg" alt="sign-in">Sign-in</a>
+        </div>
+    </div>
+</div>

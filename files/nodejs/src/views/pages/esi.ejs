@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head', {headerTitle: 'ESI LAG Configuration Generator'}); %>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+        <section class="banner">
+            <img src="images/index_splash.png" />
+            <div class="inner-content col-md-12">
+                <div class="container">
+                    <h1>Data Center</h1>
+                    <span>Build ESI LAG configurations for Junos</span>
+                    <p>
+                        <span>
+                     <i class="fa fa-play"></i>
+                     </span> Watch this video to see how much this tool simplifies your life.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="sec_include">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 section5 text-center">
+                        <h2 class="h1 font-w400">Build Your Next ESI LAG Configuration</h2>
+                        <p class="margin-top-m margin-bottom-m">Create without complexity.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <form name="esiConfigForm" enctype="application/x-www-form-urlencoded" method="post" action="/api/add-esi-config" role="form" data-toggle="validator" novalidate="true">
+                            <div class="form schedule-assessment">
+                                <div class="row margin-top-l">
+                                    <div class="form-group col-md-6">
+                                        <label for="esi_iface_name" class="sr-only">Name of ESI LAG interface </label>
+                                        <span>Name of ESI LAG interface</span>
+                                        <input name="esi_iface_name" id="esi_iface_name" placeholder="ae1" type="text" value="" required="required" data-error="Please enter the ESI interface name.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <!-- close col-->
+                                    <div class="form-group col-md-6">
+                                        <label for="description" class="sr-only">Interface Description</label>
+                                        <span>Enter a description for this LAG interface</span>
+                                        <input name="description" id="description" placeholder="hpe1eval2019:LAG" type="text" value="" required="required" data-error="Description is required per company policy">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <!-- close col-->
+                                </div>
+                                <!-- close row-->
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="interface_type" class="sr-only">Trunk or Access</label>
+                                        <span>Will this be a Trunk or Access interface?</span>
+                                        <select name="interface_type" required="required" data-error="Please select one option.">
+                                 <option value="">Interface Type</option>
+                                 <option value="access">Access</option>
+                                 <option value="trunk">Trunk</option>
+                              </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <!-- close col-->
+                                    <div class="form-group col-md-6">
+                                        <label for="vlans" class="sr-only">VLAN(s)</label>
+                                        <span>Please enter the VLAN(s)</span>
+                                        <input name="vlans" id="vlans" placeholder="vlan99_dmz" type="text" value="" required="required" data-error="Please enter a vlan">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <!-- close row-->
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label>Jumbo Frames?</label>
+                                        <div class="radio">
+                                            <label>
+                                    <input type="radio" name="jumbo_mtu" value="yes" required>
+                                    Yes, set MTU to 9216
+                                 </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                    <input type="radio" name="jumbo_mtu" value="no" required>
+                                    No, set MTU to 1500
+                                 </label>
+                                        </div>
+                                    </div>
+                                    <!-- close col-->
+                                </div>
+                                <!-- close row-->
+                                <div class="form-group text-center">
+                                    <input class="submit center-block btn btn-primary" value="Submit" type="submit">
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+    </div>
+    <!--End of Wrapper ----------->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

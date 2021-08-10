@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/config-head', {headerTitle: 'ESI LAG Configuration'}); %>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <%- include('../partials/config-header'); %>
+        </header>
+        <section class="sec_include">
+            <div class="container">
+                <%=esiConfig.esi_iface_name%>:
+                    <%=esiConfig.description%>
+                        <br>
+                        <pre>
+                    <code>
+                        set interfaces <%=esiConfig.esi_iface_name%> description <%=esiConfig.description%>
+                        set interfaces <%=esiConfig.esi_iface_name%> mtu 9216
+                        set interfaces <%=esiConfig.esi_iface_name%> esi 00:ae:01:06:01:02:02:00:00:00
+                        set interfaces <%=esiConfig.esi_iface_name%> esi all-active
+                        set interfaces <%=esiConfig.esi_iface_name%> aggregated-ether-options lacp active
+                        set interfaces <%=esiConfig.esi_iface_name%> aggregated-ether-options lacp periodic fast
+                        set interfaces <%=esiConfig.esi_iface_name%> aggregated-ether-options lacp system-id ae:01:06:01:02:02
+                        set interfaces <%=esiConfig.esi_iface_name%> unit 0 family ethernet-switching interface-mode access
+                        set interfaces <%=esiConfig.esi_iface_name%> unit 0 family ethernet-switching vlan members <%=esiConfig.vlans%>
+                    </code>
+                </pre>
+            </div>
+        </section>
+        <footer>
+            <%- include('../partials/config-footer'); %>
+        </footer>
+    </div>
+    <!---------- End of Wrapper ----------->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            // alert("wow");
+            //  jQuery("header").addClass("fixed");
+            jQuery("#hamburger").click(function() {
+                //alert("The paragraph was clicked.");
+                jQuery("header").toggleClass("fixed");
+            });
+        });
+    </script>
+</body>
+
+</html>

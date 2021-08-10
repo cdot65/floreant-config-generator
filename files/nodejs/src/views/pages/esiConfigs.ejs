@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('../partials/head', {headerTitle: 'ESI LAG Configurations'}); %>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <%- include('../partials/header'); %>
+        </header>
+        <section class="sec_include">
+            <div class="container">
+                <% esiConfigs.map((esiConfig, index)=>{%>
+                    <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
+                        <h3>
+                            <%=esiConfig.esi_iface_name%>:
+                                <%=esiConfig.description%>
+                        </h3>
+                        <p>
+                            <span>Interface Type: <%=esiConfig.interface_type.slice(0,300)%></span><br/>
+                            <span>Jumbo MTU: <%=esiConfig.jumbo_mtu%></span><br/>
+                            <span>VLANs: <%=esiConfig.vlans.slice(0,300)%></span><br/>
+                        </p>
+                        <a href="/esiConfigs/<%=esiConfig._id%>" class="btn-oval">See Config</a>
+                    </div>
+                    <% }) %>
+            </div>
+        </section>
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+    </div>
+    <!---------- End of Wrapper ----------->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            // alert("wow");
+            //  jQuery("header").addClass("fixed");
+            jQuery("#hamburger").click(function() {
+                //alert("The paragraph was clicked.");
+                jQuery("header").toggleClass("fixed");
+            });
+        });
+    </script>
+</body>
+
+</html>

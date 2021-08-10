@@ -47,6 +47,36 @@ app.use('/api/add-config', addConfigRouter);
 app.use('/api/add-esi-config', addEsiConfigRouter);
 app.use('/api/add-data', adminRouter);
 
+// Collapsed Spine builder form
+app.get('/collapsed-spine', function(req, res) {
+    res.render('pages/collapsed-spine');
+});
+
+// CRB builder form
+app.get('/crb', function(req, res) {
+    res.render('pages/crb');
+});
+
+// Data Center landing page
+app.get('/data-center', function(req, res) {
+    res.render('pages/data-center');
+});
+
+// ERB builder form
+app.get('/erb', function(req, res) {
+    res.render('pages/erb');
+});
+
+// ESI builder form
+app.get('/esi', function(req, res) {
+    res.render('pages/esi');
+});
+
+// Security landing page
+app.get('/security', function(req, res) {
+    res.render('pages/security');
+});
+
 // this should never run unless index.ejs is deleted
 app.get('/', (req, res) => {
     res.render('index', { title: 'junosConfig', data: ['a', 'b', 'c'] });
