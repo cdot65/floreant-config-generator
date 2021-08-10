@@ -2,7 +2,7 @@
 <html>
 
     <head>
-        <title>Junos Config Generator</title>
+        <title>ESI LAG Configurations</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,7 +23,7 @@
                 <div class="container">
                     <div class="logo col-md-5 col-sm-5 col-xs-8">
                         <a href="/"><img src="images/banner.svg" alt="logo" /></a>
-                        <span class="text">Junos Config Tool</span>
+                        <span class="text">ESI LAG Configurations</span>
                     </div>
                     <div class="mobile-togle col-md-12 col-sm-12 col-xs-12">
                         <nav class="navbar navbar-default" role="navigation">
@@ -99,15 +99,17 @@
             </header>
             <section class="sec_include">
                 <div class="container">
-                    <% configs.map((config, index)=>{%>
+                    <% esiConfigs.map((esiConfig, index)=>{%>
                         <div class="col-xs-12 col-sm-4 col-md-4 adj_text">
                             <h3>
-                                <%=config.host_name%>
+                                <%=esiConfig.esi_iface_name%>:<%=esiConfig.description%> 
                             </h3>
                             <p>
-                                <%=config.lo0_0.slice(0,300)%>
+                                <span>Interface Type: <%=esiConfig.interface_type.slice(0,300)%></span><br/>
+                                <span>Jumbo MTU: <%=esiConfig.jumbo_mtu%></span><br/>
+                                <span>VLANs: <%=esiConfig.vlans.slice(0,300)%></span><br/>
                             </p>
-                            <a href="/configs/<%=config._id%>" class="btn-oval">Learn More</a>
+                            <a href="/esiConfigs/<%=esiConfig._id%>" class="btn-oval">See Config</a>
                         </div>
                     <% }) %>
                 </div>
