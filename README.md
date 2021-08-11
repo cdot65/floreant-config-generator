@@ -1,90 +1,101 @@
-# Junos Configuration Web Application
+<h1 align="center">
+  <img src="files/images/header.png" width="224px"/><br/>
+  Floreant
+</h1>
+<p align="center">
+  Create a new production-ready Junos configuration with <b>backend</b> (JavaScript), <b>frontend</b> (JavaScript, TypeScript)<br/>
+</p>
 
-[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Juniper_Networks_logo.svg/315px-Juniper_Networks_logo.svg.png)](https://www.juniper.net/us/en.html)
+<p align="center">
+  <a href="https://gitlab.com/_calvinr/web/javascript/floreant/-/releases" target="_blank">
+    <img src="https://img.shields.io/badge/version-v0.0.2-blue?style=for-the-badge&logo=none" alt="app version" />
+  </a>
+  <a href="https://gitlab.com/_calvinr/web/javascript/floreant/-/releases" target="_blank">
+    <img src="https://img.shields.io/badge/ES6-2018+-00ADD8?style=for-the-badge&logo=javascript" alt="go version" />
+  </a>
+  <img src="https://img.shields.io/badge/license-apache_2.0-red?style=for-the-badge&logo=none" alt="license" />
+</p>
 
-## Overview
+## ⚡️ Quick start
 
-This JavaScript based project aims to simplify the creation of configurations used by devices running Junos.
+First of all, [download](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and install **npm**. Version `6.1` or higher is required.
 
-> This project is still active development
+As standard with most JavaScript projects, the `packages.json` file found in `files/nodejs` directory contains a couple of scripts to help you get off the ground and running.
 
-## 📜 Preparing your JavaScript environment
-
-As standard with most JavaScript projects, the `packages.json` file found in `files/nodejs` directory contains a couple of scripts to help you get off the ground and running
-
-1. install JavaScript dependencies
+Installation is done by using the [`npm install`](https://docs.npmjs.com/cli/v7/commands/npm-install) command within the `files/nodejs` directory
 
 ```bash
+# Change into the directory containing source code
+cd files/nodejs
+
+# Install package dependencies
 npm install
+```
+
+Let's start up our web app via **npm start** in current folder:
+
+```bash
+# Start our application with nodemon
+npm start
+```
+
+Next, open a web browser and navigate to localhost:4000
+
+That's all you need to know to start! 🎉
+
+### 🐳 Docker-way to quick start
+
+If you don't want to install npm and dependencies to your system, feel free to using our official [Docker image](https://hub.docker.com/r/packetferret/floreant) and run the application from within the container:
+
+```bash
+docker run --rm -it -v ${PWD}/files/nodejs:/usr/src/app -w /usr/src/app packetferret/floreant:latest npm start
 ```
 
 ## ⚠️ Update your database path
 
 If you have decided to use a native NodeJS deployment, please make sure to update the path for your database connection parameters in the following files before proceededing.
 
-- [files/nodejs/src/routers/adminRouter.js](https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/blob/master/files/nodejs/src/routers/adminRouter.js)
-- [files/nodejs/src/routers/authRouter.js](https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/blob/master/files/nodejs/src/routers/authRouter.js)
-- [files/nodejs/src/routers/configsRouter.js](https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/blob/master/files/nodejs/src/routers/configsRouter.js)
-- [files/nodejs/src/config/strategies/local.strategy.js](https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/blob/master/files/nodejs/src/config/strategies/local.strategy.js)
+- [files/nodejs/src/routers/adminRouter.js](https://gitlab.com/_calvinr/web/javascript/floreant/-/blob/master/files/nodejs/src/routers/adminRouter.js)
+- [files/nodejs/src/routers/authRouter.js](https://gitlab.com/_calvinr/web/javascript/floreant/-/blob/master/files/nodejs/src/routers/authRouter.js)
+- [files/nodejs/src/routers/configsRouter.js](https://gitlab.com/_calvinr/web/javascript/floreant/-/blob/master/files/nodejs/src/routers/configsRouter.js)
+- [files/nodejs/src/config/strategies/local.strategy.js](https://gitlab.com/_calvinr/web/javascript/floreant/-/blob/master/files/nodejs/src/config/strategies/local.strategy.js)
 
 Container based deployments can continue with the defaults, but you'd likely want to polish them up before shipping into production.
 
-## Running the web application
+> 🔔 Please note: there is an expectation that the application can talk to a Mongo DB server in your environment.
 
-You have a couple of paths to choose from when launching the web application
+## 📖 Project Wiki
 
-1. Native NodeJS with MongoDB server
-2. Container based
+The best way to better explore all the features of the **Floreant** web application is to read the project [Wiki](https://gitlab.com/_calvinr/web/javascript/floreant/-/wikis/home) and/or [Issues](https://gitlab.com/_calvinr/web/javascript/floreant/-/issues). Yes, the most frequently asked questions (_FAQ_) are also [here](https://gitlab.com/_calvinr/web/javascript/floreant/-/wikis/home).
 
-Container based is the easier two deployment options, as you don't need to concern yourself with setting up MongoDB. Regardless of which path you choose, there is a `Makefile` in the root of the project to help simplify your interactions.
+## ⚙️ Commands & Options
 
-### Native NodeJS with a MongoDB server
+### `npm start`
 
-In the project's root folder, change into the directory containing the web application.
+![npm start](files/images/npm_start.png)
 
-```bash
-cd files/nodejs
-```
+- 📺 Full demo video: https://recordit.co/OQAwkZBrj
+- 📖 Docs: https://gitlab.com/_calvinr/web/javascript/floreant/-/wikis/home
 
-Install the dependencies (one time operation only)
+## 📝 Production-ready project templates
 
-```bash
-npm install
-```
+### Backend
 
-Start your web application
+- Backend template with JavaScript's EJS built-in [ejs](http://ejs.co/#docs) package:
 
-```bash
-npm start
-```
+### Frontend
 
-### 🐳 Container based
+- Frontend is pure JavaScript today
+- Angular overhaul will be ready by release 0.1.0
 
-build the container image with
+## ⭐️ Project assistance
 
-```bash
-make build
-```
+If you want to say **thank you** or/and support active development of `Floreant` web application:
 
-Run the applications with
+- Add a [Star](https://gitlab.com/_calvinr/web/javascript/floreant) to the project.
 
-```bash
-make start
-```
+Together, we can make this project **better** every day! 😘
 
-### 〰️ `Notes about Docker`
+## ⚠️ License
 
-If you are unsure if Docker is installed on your computer, then it's probably safe to suggest that it's not. If you're interested in learning more about the product, I encourage you to read a few blogs on the topic. A personal recommendation would be [Digital Ocean](https://www.digitalocean.com/community/tutorial_collections/how-to-install-and-use-docker#:~:text=Docker%20is%20an%20application%20that,on%20the%20host%20operating%20system.)
-
-Some of the goodies placed in the `docker` folder are not relevant to our use case with Python. Feel free to delete them as you see fit, I simply wanted to share with you my Docker build process for all Juniper automation projects (including those based on Ansible). The world is your oyster and I won't judge you on whatever direction you take.
-
-## 📝 `Dependencies`
-
-Refer to the `packages.json` file located at [files/nodejs/package-lock.js](https://gitlab.com/_calvinr/web/javascript/junos-configuration/-/blob/master/files/nodejs/package-lock.json) for detailed descriptions on each package installed.
-
-## ⚙️ `How it works`
-
-Coming soon
-## 📸 `Screenshot`
-
-![webpage](./files/images/screenshot.png)
+`Floreant` is free and open-source software licensed under the [Apache 2.0 License](https://gitlab.com/_calvinr/web/javascript/floreant/blob/master/LICENSE). Official [logo](https://gitlab.com/_calvinr/web/javascript/floreant/wiki/Logo) was created by [Calvin Remsburg](https://localhost) and distributed under [Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/) license (CC BY-SA 4.0 International).
