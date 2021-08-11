@@ -1,15 +1,12 @@
+# Floreant
+
 <h1 align="center"><img src="files/images/header.png" width="448px"/><br/>Floreant</h1>
-<p align="center">
-  Create a new production-ready Junos configuration with <b>backend</b> (JavaScript), <b>frontend</b> (JavaScript, TypeScript)<br/>
-</p>
+
+Create a new production-ready Junos configuration with <b>backend</b> (JavaScript), <b>frontend</b> (JavaScript, TypeScript)<br/>
 
 <p align="center">
-  <a href="https://gitlab.com/_calvinr/web/javascript/floreant/-/releases" target="_blank">
-    <img src="https://img.shields.io/badge/version-v0.0.2-blue?style=for-the-badge&logo=none" alt="app version" />
-  </a>
-  <a href="https://gitlab.com/_calvinr/web/javascript/floreant/-/releases" target="_blank">
-    <img src="https://img.shields.io/badge/ES6-2018+-00ADD8?style=for-the-badge&logo=javascript" alt="go version" />
-  </a>
+  <a href="https://gitlab.com/_calvinr/web/javascript/floreant/-/releases" target="_blank"><img src="https://img.shields.io/badge/version-v0.0.2-blue?style=for-the-badge&logo=none" alt="app version" /></a>
+  <a href="https://gitlab.com/_calvinr/web/javascript/floreant/-/releases" target="_blank"><img src="https://img.shields.io/badge/ES6-2018+-00ADD8?style=for-the-badge&logo=javascript" alt="go version" /></a>
   <img src="https://img.shields.io/badge/license-apache_2.0-red?style=for-the-badge&logo=none" alt="license" />
 </p>
 
