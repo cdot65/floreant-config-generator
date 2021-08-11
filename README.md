@@ -1,7 +1,4 @@
-<h1 align="center">
-  <img src="files/images/header.png" width="224px"/><br/>
-  Floreant
-</h1>
+<h1 align="center"><img src="files/images/header.png" width="448px"/><br/>Floreant</h1>
 <p align="center">
   Create a new production-ready Junos configuration with <b>backend</b> (JavaScript), <b>frontend</b> (JavaScript, TypeScript)<br/>
 </p>
