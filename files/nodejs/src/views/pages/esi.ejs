@@ -11,7 +11,7 @@
             <%- include('../partials/header'); %>
         </header>
         <section class="banner">
-            <img src="images/index_splash.png" />
+            <img src="images/splash.png" />
             <div class="inner-content col-md-12">
                 <div class="container">
                     <h1>Data Center</h1>
@@ -28,8 +28,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12 section5 text-center">
-                        <h2 class="h1 font-w400">Build Your Next ESI LAG Configuration</h2>
-                        <p class="margin-top-m margin-bottom-m">Create without complexity.</p>
+                        <h2 class="h1 font-w400">ESI LAG parameters</h2>
+                        <p class="margin-top-m margin-bottom-m"></p>
                     </div>
                 </div>
                 <div class="row">
@@ -58,10 +58,10 @@
                                         <label for="interface_type" class="sr-only">Trunk or Access</label>
                                         <span>Will this be a Trunk or Access interface?</span>
                                         <select name="interface_type" required="required" data-error="Please select one option.">
-                                 <option value="">Interface Type</option>
-                                 <option value="access">Access</option>
-                                 <option value="trunk">Trunk</option>
-                              </select>
+                                            <option value="">Interface Type</option>
+                                            <option value="access">Access</option>
+                                            <option value="trunk">Trunk</option>
+                                        </select>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <!-- close col-->
@@ -92,10 +92,25 @@
                                     <!-- close col-->
                                 </div>
                                 <!-- close row-->
+                                <div class="col-xs-12 section5 text-center">
+                                    <h2 class="h1 font-w400">Physical interfaces</h2>
+                                    <p class="margin-top-m margin-bottom-m"></p>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label for="physical_interfaces" class="sr-only">Physical Interfaces</label>
+                                        <span>Enter the physical interfaces to associate with this LAG</span>
+                                        <input name="physical_interfaces" id="physical_interfaces" placeholder="xe-0/0/4,xe-0/0/5" type="text" value="" required="required" data-error="Please enter an interface, comma seperated for multiple">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <!-- close col-->
+                                </div>
+                                <!-- close row-->
                                 <div class="form-group text-center">
                                     <input class="submit center-block btn btn-primary" value="Submit" type="submit">
                                 </div>
                             </div>
+                        </form>
                     </div>
                 </div>
             </div>
