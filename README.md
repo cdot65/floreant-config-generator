@@ -35,6 +35,8 @@ npm start
 
 Next, open a web browser and navigate to localhost:4000
 
+<h1 align="center"><img src="files/images/screenshot.png" width="448px"/><br/>Floreant</h1>
+
 That's all you need to know to start! 🎉
 
 ### 🐳 Docker-way to quick start
