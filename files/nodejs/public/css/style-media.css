@@ -344,7 +344,7 @@ footer {
 }
 
 .quick-links li a {
-    color: #dadada;
+    color: #212121;
     font-family: "Open Sans";
     font-size: 14px;
     line-height: 34px;
@@ -489,7 +489,6 @@ nav.navbar {
 
 /* END ANIMATED X */
 
-
 .navbar-nav li:hover>ul.dropdown-menu {
     display: block;
     background-color: #2f2e2b;
@@ -589,7 +588,7 @@ nav.navbar {
     .navbar-default .navbar-nav>.active>a,
     .navbar-default .navbar-nav>.active>a:focus,
     .navbar-default .navbar-nav>.active>a:hover {
-        color: #555;
+        color: #212121;
         background-color: transparent;
     }
     .navbar-toggle {
@@ -792,7 +791,7 @@ nav.navbar {
     .navbar-default .navbar-nav>.active>a,
     .navbar-default .navbar-nav>.active>a:focus,
     .navbar-default .navbar-nav>.active>a:hover {
-        color: #555;
+        color: #212121;
         background-color: transparent;
     }
     .navbar-toggle {
