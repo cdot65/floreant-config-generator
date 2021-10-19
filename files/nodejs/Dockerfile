@@ -10,6 +10,6 @@ RUN npm install
 
 COPY . /usr/src/app
 
-ENV PORT 4000
+ENV PORT 5000
 EXPOSE $PORT
 CMD [ "npm", "start" ]

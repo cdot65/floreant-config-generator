@@ -33,7 +33,7 @@ Let's start up our web app via **npm start** in current folder:
 npm start
 ```
 
-Next, open a web browser and navigate to localhost:4000
+Next, open a web browser and navigate to localhost:5000
 
 <h1 align="center"><img src="files/images/screenshot.png" width="448px"/><br/>Floreant</h1>
 
