@@ -12,7 +12,8 @@ services:
     depends_on: 
       - mongodb
     volumes: 
-      - ./nodejs:/app 
+      - ./nodejs:/app
+      - /root/k2-ic:/opt/k2-ic
     ports: 
       - "4000:4000"
   
