@@ -16,6 +16,7 @@ services:
       - /root/k2-ic:/opt/k2-ic
     ports: 
       - "4000:4000"
+    entrypoint: ["node", "--require", "/opt/k2-ic/k2-njs-agent/", "app.js"]
   
 volumes: 
   my_data: 
