@@ -13,7 +13,7 @@ services:
       - mongodb
     volumes: 
       - ./nodejs:/app
-      - /root/k2-ic:/opt/k2-ic
+      - /opt/k2-ic:/opt/k2-ic
     ports: 
       - "5000:5000"
     entrypoint: ["node", "--require", "/opt/k2-ic/k2-njs-agent/", "app.js"]
